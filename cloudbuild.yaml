@@ -1,0 +1,13 @@
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'lumidatum'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/lumidatum'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
